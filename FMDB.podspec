@@ -7,7 +7,8 @@ Pod::Spec.new do |s|
   s.author = { 'August Mueller' => 'gus@flyingmeat.com' }
   s.source = { :git => 'https://github.com/ccgus/fmdb.git', :tag => "#{s.version}" }
   s.requires_arc = true
-  s.default_subspec = 'standard'  
+  s.default_subspec = 'standard'
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }  
 
   # use the built-in library version of sqlite3
   s.subspec 'standard' do |ss|
