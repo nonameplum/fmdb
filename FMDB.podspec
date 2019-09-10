@@ -9,6 +9,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.default_subspec = 'standard'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }  
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.9'
+  s.tvos.deployment_target = '9.0'
 
   # use the built-in library version of sqlite3
   s.subspec 'standard' do |ss|
